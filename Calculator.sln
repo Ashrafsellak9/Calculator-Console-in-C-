@@ -1,25 +1,51 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.10.34928.147
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{407E2EEB-8000-41FB-93C4-FA838E388BB6}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{407E2EEB-8000-41FB-93C4-FA838E388BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{407E2EEB-8000-41FB-93C4-FA838E388BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{407E2EEB-8000-41FB-93C4-FA838E388BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{407E2EEB-8000-41FB-93C4-FA838E388BB6}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C1FCE189-E0BC-4E8F-9FCF-795D1576333B}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1;
+            int num2;
+            int result;
+
+            string answer;
+            Console.WriteLine("Hello, Welcome to the calculator program!");
+            Console.WriteLine("Please enter your first number.");
+
+            num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please enter your second number.");
+            
+            num2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("What type of operation would you like to do ?");
+            Console.WriteLine("Please enter a for addition, s for substraction, m for multiplication or d for division.");
+
+            answer = Console.ReadLine();
+            
+            if (answer == "a") {
+                result = num1 + num2;
+            } else if (answer == "s") {
+                result = num1 - num2;
+            } else if (answer == "m") {
+                result = num1 * num2;
+            } else if (answer == "d") {
+                result = num1 / num2;
+            } else
+            {
+                result = 0;
+            }
+                Console.WriteLine("The result is " + result);
+                Console.WriteLine("Thank you for using the calculator program!");
+
+                Console.ReadKey();
+        }
+    }
+}
