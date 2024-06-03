@@ -13,4 +13,4 @@ This is a simple console application built with C# that performs basic arithmeti
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/calculator-console.git
+   git clone https://github.com/Ashrafsellak9/calculator-console.git
